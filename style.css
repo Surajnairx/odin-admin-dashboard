@@ -7,19 +7,22 @@
 body {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 10fr;
+  grid-template-rows: 1fr 5fr;
 }
 .sidebar {
   padding: 1rem;
+  grid-row: 1/3;
+  background-color: rgb(75, 147, 235);
+  color: white;
 }
-.logo {
+.dashboard-logo {
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.logo > svg {
+.dashboard-logo > svg {
   height: 40px;
   padding: 0.5rem;
 }
@@ -30,7 +33,82 @@ nav > ul > li {
   display: flex;
   align-items: center;
 }
-nav > ul > li > svg {
+svg {
   height: 40px;
   padding: 0.5rem;
+  fill: white;
+}
+header {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 0 2rem;
+}
+.search {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+.search > svg {
+  fill: black;
+}
+.search > input {
+  width: 100%;
+  height: 1.5rem;
+  background-color: rgb(226, 226, 226);
+  border: none;
+  border-radius: 5rem;
+}
+.notification-setting {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 25px;
+  margin-right: 5rem;
+}
+
+.notification-setting > button {
+  border: none;
+  background-color: white;
+}
+.notification-setting > button > svg {
+  fill: black;
+}
+.notification-setting > img {
+  height: 2.3rem;
+  border-radius: 5rem;
+}
+.logo {
+  display: flex;
+  gap: 2rem;
+}
+.logo > img {
+  border-radius: 5rem;
+}
+.dashboard-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 2rem;
+}
+.dashboard-button > button {
+  padding: 1rem 2rem;
+  background-color: rgb(75, 147, 235);
+  color: white;
+  border: none;
+  border-radius: 5rem;
+}
+main {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1/2;
+  display: grid;
+  padding: 0 2rem;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
